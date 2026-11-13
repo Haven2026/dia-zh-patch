@@ -9,9 +9,13 @@ has also been tested on Dia `1.44.1 (85212)`.
 
 > The patch requires ad-hoc re-signing, which replaces Dia's official signature
 > and removes its browser passkey and keychain access group entitlements.
+> It also removes the Apple Push Notification service (APNs) entitlement, which
+> may affect Dia's remote push notifications, including push-triggered sync
+> refreshes. The impact on sync and the availability of polling are unverified.
 > The signing requirements observed on macOS 26.6.2 are expected to prevent
 > re-signed Dia `1.57.1 (90935)` from launching the iCloud Passwords native
-> helper. This behavior has yet to be tested by running re-signed Dia.
+> helper directly. The experimental [DiaTweaks password relay](https://github.com/JaceThings/DiaTweaks/wiki/Allow-iCloud-Passwords)
+> remains unverified with patched Dia.
 > Keep the officially signed Dia if you use this extension on macOS 26.6.2.
 
 Download the macOS arm64 ZIP from GitHub Releases, verify its SHA-256 file,

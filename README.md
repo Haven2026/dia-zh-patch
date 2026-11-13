@@ -12,8 +12,11 @@ Build 额外执行严格限定的 WebUI 替换。
 
 > 本项目与 The Browser Company、Dia 或 Atlassian 没有隶属或授权关系。
 > 补丁必须以本机 ad-hoc 签名替换官方签名，并移除浏览器通行密钥和钥匙串访问组权限。
+> 重签也会移除 Apple 推送通知权限（APNs），可能影响 Dia 自身的远程推送，包括由推送触发的同步刷新。
+> 实际同步是否受影响、是否有轮询兜底尚未验证。
 > 根据 macOS 26.6.2 上的签名检查，预计 iCloud 密码扩展助手无法由重签后的 Dia
-> `1.57.1 (90935)` 启动。尚未运行重签后的 Dia 验证这一行为。
+> `1.57.1 (90935)` 直接启动。[DiaTweaks 密码中继](https://github.com/JaceThings/DiaTweaks/wiki/Allow-iCloud-Passwords)
+> 是实验性方案，在汉化版上的兼容性仍待验证。
 
 ## 下载与安装
 

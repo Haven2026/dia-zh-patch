@@ -71,6 +71,7 @@ sanitize_entitlements() {
   local restricted
   for restricted in \
     "com.apple.application-identifier" \
+    "com.apple.developer.aps-environment" \
     "com.apple.developer.associated-domains" \
     "com.apple.developer.team-identifier" \
     "com.apple.developer.web-browser.public-key-credential" \
@@ -108,6 +109,10 @@ capture_entitlements() {
 sign_target() {
   local target="$1" entitlements
   entitlements="$(entitlements_path "$target")"
+  if [[ -d "$target" ]]; then
+    # The official profile cannot authorize this ad-hoc signature.
+    rm -f -- "$target/Contents/embedded.provisionprofile"
+  fi
   codesign --force --sign - --timestamp=none --options runtime \
     --entitlements "$entitlements" "$target" >/dev/null 2>&1 ||
     die "无法签名：$target"
