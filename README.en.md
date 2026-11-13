@@ -7,11 +7,20 @@ for Dia `1.57.1 (90935)`. Installation and restoration were checked on an
 official app copy. Launch, sign-in and visual checks are pending. Core mode
 has also been tested on Dia `1.44.1 (85212)`.
 
+> The patch requires ad-hoc re-signing, which replaces Dia's official signature
+> and removes its browser passkey and keychain access group entitlements.
+> The current Dia `1.57.1 (90935)` patch is incompatible with the macOS iCloud
+> Passwords extension because its native helper checks the browser's signing
+> identity. Keep the officially signed Dia if you use this extension.
+
 Download the macOS arm64 ZIP from GitHub Releases, verify its SHA-256 file,
 quit Dia, then double-click `dia-zh.command`. To use the 90935 changes, build
 from this branch with `./scripts/build-menu.zsh` and run `./dia-zh.command audit`
 before applying the patch. The stable commands are `apply`, `audit`, `status`,
 and `restore`.
+
+Backup and restore cover only the `Dia.app` bundle. Browser profiles, Keychain
+items, and cloud sync state are outside the backup.
 
 The installer automatically selects `full`, `core`, or `incompatible`
 coverage. Unknown but structurally compatible official builds use the safe

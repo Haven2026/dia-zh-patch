@@ -3,7 +3,7 @@
 [English](README.en.md) · [更新记录](CHANGELOG.md) · [安全说明](SECURITY.md)
 
 面向 macOS Apple Silicon 的非官方 Dia 浏览器简体中文补丁。它会先验证官方
-应用和资源、创建完整备份，再汉化 Chromium 界面、原生界面和菜单；对已验证的
+应用和资源、备份应用包，再汉化 Chromium 界面、原生界面和菜单；对已验证的
 Build 额外执行严格限定的 WebUI 替换。
 
 已发布的 `v0.1.0-rc.2` 预发布包支持 Dia `1.41.1 (84131)` 完整模式。
@@ -11,7 +11,8 @@ Build 额外执行严格限定的 WebUI 替换。
 核心模式另已实测 Dia `1.44.1 (85212)`。系统要求 macOS 14 或更高版本。
 
 > 本项目与 The Browser Company、Dia 或 Atlassian 没有隶属或授权关系。
-> 补丁会把应用改为本机 ad-hoc 签名；请理解风险并保留补丁创建的官方备份。
+> 补丁必须以本机 ad-hoc 签名替换官方签名，并移除浏览器通行密钥和钥匙串访问组权限。
+> 当前 Dia `1.57.1 (90935)` 补丁与 macOS 的 iCloud 密码扩展不兼容。
 
 ## 下载与安装
 
@@ -86,10 +87,13 @@ Release ZIP。
 
 ## 签名、Code 6 与恢复
 
-安装后应用使用统一的 ad-hoc 签名。签名器会读取原组件权限，移除 ad-hoc 无法
-保留的 Team ID、application identifier 和 keychain 字段，保留 Renderer/GPU
+安装后应用使用统一的 ad-hoc 签名。签名器移除官方 Team ID、application identifier、
+浏览器通行密钥和钥匙串访问组权限，保留 Renderer/GPU
 的 JIT 权限，并为相关组件加入 Library Validation 兼容设置。签名顺序为内部
 Mach-O、嵌套 Bundle、Framework，最后 Dia.app，并执行严格深度验证。
+
+macOS 的 iCloud 密码扩展助手会校验连接浏览器的签名身份。使用该扩展时，请保留
+官方签名的 Dia。
 
 若出现 “Something’s not right · Code 6”，请依次运行：
 
@@ -103,7 +107,8 @@ Mach-O、嵌套 Bundle、Framework，最后 Dia.app，并执行严格深度验�
 重新安装，并在 Issue 中附上已脱敏的命令输出，切勿上传用户数据或完整应用包。
 
 安装中任一步失败都会尝试恢复官方备份。`restore` 会验证官方 Team ID 和严格
-签名；如果 Dia 已升级到不同 Build，它会拒绝用旧备份覆盖。
+签名；如果 Dia 已升级到不同 Build，它会拒绝用旧备份覆盖。备份和恢复仅针对
+`Dia.app`，不包含浏览器资料、钥匙串或云同步状态。
 
 ## 官方自动更新
 
