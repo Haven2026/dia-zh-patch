@@ -9,9 +9,10 @@ has also been tested on Dia `1.44.1 (85212)`.
 
 > The patch requires ad-hoc re-signing, which replaces Dia's official signature
 > and removes its browser passkey and keychain access group entitlements.
-> The current Dia `1.57.1 (90935)` patch is incompatible with the macOS iCloud
-> Passwords extension because its native helper checks the browser's signing
-> identity. Keep the officially signed Dia if you use this extension.
+> The signing requirements observed on macOS 26.6.2 are expected to prevent
+> re-signed Dia `1.57.1 (90935)` from launching the iCloud Passwords native
+> helper. This behavior has yet to be tested by running re-signed Dia.
+> Keep the officially signed Dia if you use this extension on macOS 26.6.2.
 
 Download the macOS arm64 ZIP from GitHub Releases, verify its SHA-256 file,
 quit Dia, then double-click `dia-zh.command`. To use the 90935 changes, build

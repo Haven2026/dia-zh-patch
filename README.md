@@ -12,7 +12,8 @@ Build 额外执行严格限定的 WebUI 替换。
 
 > 本项目与 The Browser Company、Dia 或 Atlassian 没有隶属或授权关系。
 > 补丁必须以本机 ad-hoc 签名替换官方签名，并移除浏览器通行密钥和钥匙串访问组权限。
-> 当前 Dia `1.57.1 (90935)` 补丁与 macOS 的 iCloud 密码扩展不兼容。
+> 根据 macOS 26.6.2 上的签名检查，预计 iCloud 密码扩展助手无法由重签后的 Dia
+> `1.57.1 (90935)` 启动。尚未运行重签后的 Dia 验证这一行为。
 
 ## 下载与安装
 
@@ -92,8 +93,8 @@ Release ZIP。
 的 JIT 权限，并为相关组件加入 Library Validation 兼容设置。签名顺序为内部
 Mach-O、嵌套 Bundle、Framework，最后 Dia.app，并执行严格深度验证。
 
-macOS 的 iCloud 密码扩展助手会校验连接浏览器的签名身份。使用该扩展时，请保留
-官方签名的 Dia。
+macOS 26.6.2 上的 iCloud 密码扩展助手要求连接浏览器具备受信任的签名身份。
+在该版本使用 iCloud 密码扩展时，请保留官方签名的 Dia。
 
 若出现 “Something’s not right · Code 6”，请依次运行：
 
