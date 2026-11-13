@@ -32,8 +32,9 @@ make_helper() {
   make_info_plist "$helper/Contents/Info.plist" "$identifier" "$name"
   xcrun clang -fobjc-arc -framework Foundation \
     "$ROOT/tests/fixtures/minimal-main.m" -o "$helper/Contents/MacOS/$name"
+  touch "$helper/Contents/embedded.provisionprofile"
   codesign --force --sign - --timestamp=none --options runtime \
-    --entitlements "$ROOT/native/entitlements/helper-jit.plist" "$helper" >/dev/null
+    --entitlements "$FIXTURE_ROOT/helper-jit.plist" "$helper" >/dev/null
 }
 
 mkdir -p "$APP/Contents/MacOS" "$ARC_A/Resources" "$ARC_A/Helpers"
@@ -52,6 +53,11 @@ plutil -create xml1 "$ARC_A/Resources/Info.plist"
   "$ARC_A/Resources/Info.plist"
 xcrun clang -dynamiclib "$ROOT/tests/fixtures/minimal-dylib.c" -o "$ARC_A/ArcCore"
 
+for plist in helper.plist helper-jit.plist; do
+  cp "$ROOT/native/entitlements/$plist" "$FIXTURE_ROOT/$plist"
+  /usr/libexec/PlistBuddy -c "Add :com.apple.developer.aps-environment string production" \
+    "$FIXTURE_ROOT/$plist"
+done
 make_helper "Browser Helper (GPU)" "test.dia.fixture.gpu"
 make_helper "Browser Helper (Renderer)" "test.dia.fixture.renderer"
 
@@ -59,9 +65,23 @@ ln -s A "$ARC/Versions/Current"
 ln -s Versions/Current/ArcCore "$ARC/ArcCore"
 ln -s Versions/Current/Resources "$ARC/Resources"
 codesign --force --sign - --timestamp=none --options runtime "$ARC" >/dev/null
+touch "$APP/Contents/embedded.provisionprofile"
 codesign --force --sign - --timestamp=none --options runtime \
-  --entitlements "$ROOT/native/entitlements/helper.plist" "$APP" >/dev/null
+  --entitlements "$FIXTURE_ROOT/helper.plist" "$APP" >/dev/null
 
 "$ROOT/scripts/sign-app.zsh" "$APP" "$FIXTURE_ROOT/work"
 codesign --verify --deep --strict "$APP"
+for bundle in "$APP" "$ARC_A"/Helpers/*.app; do
+  if [[ -e "$bundle/Contents/embedded.provisionprofile" ]]; then
+    print -ru2 -- "重签后仍有配置描述文件：$bundle"
+    exit 1
+  fi
+  codesign -d --entitlements :- "$bundle" > "$FIXTURE_ROOT/verified.plist" 2>/dev/null
+  if /usr/libexec/PlistBuddy -c 'Print :com.apple.developer.aps-environment' \
+    "$FIXTURE_ROOT/verified.plist" >/dev/null 2>&1; then
+    print -ru2 -- "重签后仍有受限推送权限：$bundle"
+    exit 1
+  fi
+done
+"$APP/Contents/MacOS/Dia"
 print -r -- "签名 Fixture 通过。"

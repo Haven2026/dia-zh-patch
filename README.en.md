@@ -1,13 +1,31 @@
 # Dia Simplified Chinese Patch
 
 An unofficial Simplified Chinese localization patch for Dia on Apple Silicon
-Macs. `v0.1.0-rc.2` is a pre-release; full WebUI coverage is verified only for
-Dia `1.41.1` (Build `84131`) on macOS 14+. Core mode has also been tested on
-Dia `1.44.1` (Build `85212`).
+Macs running macOS 14+. The published `v0.1.0-rc.2` pre-release includes full
+mode for Dia `1.41.1 (84131)`. This branch adds a full-mode resource baseline
+for Dia `1.57.1 (90935)`. Installation and restoration were checked on an
+official app copy. Launch, sign-in and visual checks are pending. Core mode
+has also been tested on Dia `1.44.1 (85212)`.
+
+> The patch requires ad-hoc re-signing, which replaces Dia's official signature
+> and removes its browser passkey and keychain access group entitlements.
+> It also removes the Apple Push Notification service (APNs) entitlement, which
+> may affect Dia's remote push notifications, including push-triggered sync
+> refreshes. The impact on sync and the availability of polling are unverified.
+> The signing requirements observed on macOS 26.6.2 are expected to prevent
+> re-signed Dia `1.57.1 (90935)` from launching the iCloud Passwords native
+> helper directly. The experimental [DiaTweaks password relay](https://github.com/JaceThings/DiaTweaks/wiki/Allow-iCloud-Passwords)
+> remains unverified with patched Dia.
+> Keep the officially signed Dia if you use this extension on macOS 26.6.2.
 
 Download the macOS arm64 ZIP from GitHub Releases, verify its SHA-256 file,
-quit Dia, then double-click `dia-zh.command`. The stable commands are `apply`,
-`audit`, `status`, and `restore`.
+quit Dia, then double-click `dia-zh.command`. To use the 90935 changes, build
+from this branch with `./scripts/build-menu.zsh` and run `./dia-zh.command audit`
+before applying the patch. The stable commands are `apply`, `audit`, `status`,
+and `restore`.
+
+Backup and restore cover only the `Dia.app` bundle. Browser profiles, Keychain
+items, and cloud sync state are outside the backup.
 
 The installer automatically selects `full`, `core`, or `incompatible`
 coverage. Unknown but structurally compatible official builds use the safe

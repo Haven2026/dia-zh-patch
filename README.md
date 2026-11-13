@@ -3,15 +3,20 @@
 [English](README.en.md) · [更新记录](CHANGELOG.md) · [安全说明](SECURITY.md)
 
 面向 macOS Apple Silicon 的非官方 Dia 浏览器简体中文补丁。它会先验证官方
-应用和资源、创建完整备份，再汉化 Chromium 界面、原生界面和菜单；对已验证的
+应用和资源、备份应用包，再汉化 Chromium 界面、原生界面和菜单；对已验证的
 Build 额外执行严格限定的 WebUI 替换。
 
-当前版本为 `v0.1.0-rc.2` 预发布版。完整模式仅验证过 Dia `1.41.1`
-（Build `84131`）；核心模式另已实测 Dia `1.44.1`（Build `85212`）。系统要求
-macOS 14 或更高版本。
+已发布的 `v0.1.0-rc.2` 预发布包支持 Dia `1.41.1 (84131)` 完整模式。
+当前源码另包含 Dia `1.57.1 (90935)` 的完整模式资源清单，使用前需从源码构建。
+核心模式另已实测 Dia `1.44.1 (85212)`。系统要求 macOS 14 或更高版本。
 
 > 本项目与 The Browser Company、Dia 或 Atlassian 没有隶属或授权关系。
-> 补丁会把应用改为本机 ad-hoc 签名；请理解风险并保留补丁创建的官方备份。
+> 补丁必须以本机 ad-hoc 签名替换官方签名，并移除浏览器通行密钥和钥匙串访问组权限。
+> 重签也会移除 Apple 推送通知权限（APNs），可能影响 Dia 自身的远程推送，包括由推送触发的同步刷新。
+> 实际同步是否受影响、是否有轮询兜底尚未验证。
+> 根据 macOS 26.6.2 上的签名检查，预计 iCloud 密码扩展助手无法由重签后的 Dia
+> `1.57.1 (90935)` 直接启动。[DiaTweaks 密码中继](https://github.com/JaceThings/DiaTweaks/wiki/Allow-iCloud-Passwords)
+> 是实验性方案，在汉化版上的兼容性仍待验证。
 
 ## 下载与安装
 
@@ -39,12 +44,22 @@ macOS 14 或更高版本。
 默认应用路径为 `/Applications/Dia.app`。测试副本可设置 `DIA_APP_PATH`，备份和
 状态默认位于 `~/Library/Application Support/DiaZhPatch/`。
 
+从源码构建适配 Dia 1.57.1 的版本
+
+```zsh
+./scripts/build-menu.zsh
+./dia-zh.command audit
+```
+
+审计通过后可运行 `./dia-zh.command apply`。
+
 ## 自动兼容模式
 
 补丁自动选择以下覆盖级别，并在 `audit` 与 `status` 中明确显示：
 
-- `full`：已验证的 `1.41.1 (84131)`，启用 Chromium、统一词表、菜单动态库和
-  WebUI 精确替换。
+- `full`：`1.41.1 (84131)` 和 `1.57.1 (90935)`，启用 Chromium、统一词表、
+  菜单动态库和 WebUI 精确替换。90935 已在官方应用副本验证安装和恢复，
+  仍待完成启动、登录和界面验收。
 - `core`：其他结构兼容的官方 Build，只启用 Chromium、统一词表和菜单汉化，
   不套用旧 WebUI 规则。`1.44.1 (85212)` 已完成本机核心模式验收。
 - `incompatible`：Bundle ID、官方签名身份、关键资源或架构不兼容，写入前拒绝。
@@ -66,7 +81,7 @@ DIA_ZH_MODE=core ./dia-zh.command apply
 3. 通过源码构建的 arm64 动态库汉化 macOS 静态和动态菜单。
 4. 仅对清单已验证的 Build 执行文件级 WebUI 精确替换。
 
-当前统一词表有 408 个键，其中菜单白名单 156 个。菜单翻译器会保护书签、历史、
+当前统一词表有 512 个键，其中菜单白名单 156 个。菜单翻译器会保护书签、历史、
 窗口名和网页标题等用户内容；普通网页、AI 实时回答、第三方扩展、prompt、agent
 spec 和服务端临时文案不在范围内。
 
@@ -76,10 +91,13 @@ Release ZIP。
 
 ## 签名、Code 6 与恢复
 
-安装后应用使用统一的 ad-hoc 签名。签名器会读取原组件权限，移除 ad-hoc 无法
-保留的 Team ID、application identifier 和 keychain 字段，保留 Renderer/GPU
+安装后应用使用统一的 ad-hoc 签名。签名器移除官方 Team ID、application identifier、
+浏览器通行密钥和钥匙串访问组权限，保留 Renderer/GPU
 的 JIT 权限，并为相关组件加入 Library Validation 兼容设置。签名顺序为内部
 Mach-O、嵌套 Bundle、Framework，最后 Dia.app，并执行严格深度验证。
+
+macOS 26.6.2 上的 iCloud 密码扩展助手要求连接浏览器具备受信任的签名身份。
+在该版本使用 iCloud 密码扩展时，请保留官方签名的 Dia。
 
 若出现 “Something’s not right · Code 6”，请依次运行：
 
@@ -93,13 +111,14 @@ Mach-O、嵌套 Bundle、Framework，最后 Dia.app，并执行严格深度验�
 重新安装，并在 Issue 中附上已脱敏的命令输出，切勿上传用户数据或完整应用包。
 
 安装中任一步失败都会尝试恢复官方备份。`restore` 会验证官方 Team ID 和严格
-签名；如果 Dia 已升级到不同 Build，它会拒绝用旧备份覆盖。
+签名；如果 Dia 已升级到不同 Build，它会拒绝用旧备份覆盖。备份和恢复仅针对
+`Dia.app`，不包含浏览器资料、钥匙串或云同步状态。
 
 ## 官方自动更新
 
 补丁不会关闭 Dia 的自动更新。官方更新通常会替换已修改的应用包；再次运行
 `status` 或 `apply` 时，若检测到有效官方签名和新 Build，旧状态会被标记为
-`superseded`，新 Build 最多进入 `core` 模式。旧备份永远不会覆盖更高 Build。
+`superseded`，未知 Build 最多进入 `core` 模式。旧备份永远不会覆盖更高 Build。
 
 ## 开发与验证
 
@@ -110,7 +129,7 @@ Mach-O、嵌套 Bundle、Framework，最后 Dia.app，并执行严格深度验�
 ./scripts/build-menu.zsh
 ```
 
-测试覆盖词表、占位符、菜单冲突、manifest 索引、87 条 WebUI 规则、180 个文件
+测试覆盖词表、占位符、菜单冲突、manifest 索引、两个 Build 的 226 条 WebUI 规则与 340 个文件
 哈希、Zsh/JXA/plist、arm64 编译，以及嵌套签名/JIT Fixture。发布验收与已知基线
 见 [QA_CHECKLIST.md](docs/QA_CHECKLIST.md) 和
 [BUILD_PROVENANCE.md](docs/BUILD_PROVENANCE.md)。
