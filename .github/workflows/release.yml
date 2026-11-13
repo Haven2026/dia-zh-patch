@@ -32,4 +32,4 @@ jobs:
             dist/*.zip dist/*.zip.sha256 \
             --prerelease \
             --title "$GITHUB_REF_NAME" \
-            --notes "预发布版。完整模式仅验证 Dia 1.41.1 (Build 84131)；其他结构兼容版本自动使用核心模式。"
+            --notes "预发布版。完整模式适用构建见 README 与 manifests/index.json。未知但结构兼容的官方构建自动使用核心模式。"

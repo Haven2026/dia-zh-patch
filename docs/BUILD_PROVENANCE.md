@@ -75,3 +75,22 @@ spec、source map、测试文件、第三方扩展或未列入清单的任意文
 Git 历史不保存预编译动态库。Release 工作流在 macOS Runner 上从源码构建，签名
 Fixture 验证 Renderer/GPU 的 JIT 权限与 Library Validation 设置，然后把产物放入
 Release ZIP。
+
+# 1.57.1（90935）资源基线
+
+基线来自已安装的官方签名应用，Team ID 为 `S6N382Y83G`，通过严格深度签名验证。
+同版本的官方归档为
+[Dia 1.57.1（90935）](https://releases.diabrowser.com/release/Dia-1.57.1-90935.zip)。
+
+| WebUI 目录 | JS/HTML 文件 |
+|---|---:|
+| 聊天（`web-chat-resources/dist`） | 148 |
+| 欢迎明信片（`WelcomePostcardBundle`） | 1 |
+| 晨间简报介绍（`MorningBriefTeaserBundle`） | 2 |
+| 新手指南（`TrialGuideBundle`） | 1 |
+| 工具导览（`ToolTourBundle`） | 8 |
+
+旧的 `HomeWebBundle` 已移除。90935 清单在 160 个文件中固定原版与补丁版
+SHA-256，139 条规则在 12 个文件内精确替换 171 处固定文本。覆盖聊天常见状态、
+笔记、待办、定时任务概览以及部分介绍页面。各规则限定到具体文件，
+不处理 AI 示例指令、提示词、第三方库或服务端内容。旧构建清单不变。

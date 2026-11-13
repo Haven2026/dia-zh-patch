@@ -1,0 +1,2143 @@
+{
+  "schemaVersion": 1,
+  "product": "Dia",
+  "bundleIdentifier": "company.thebrowser.dia",
+  "officialTeamIdentifier": "S6N382Y83G",
+  "shortVersion": "1.57.1",
+  "buildVersion": "90935",
+  "minimumMacOS": "14.0",
+  "architecture": "arm64",
+  "criticalFiles": [
+    {
+      "path": "Contents/MacOS/Dia",
+      "bytes": 148335040
+    },
+    {
+      "path": "Contents/Info.plist",
+      "bytes": 7396
+    },
+    {
+      "path": "Contents/Frameworks/ArcCore.framework/Versions/A/Resources/en.lproj/locale.pak",
+      "bytes": 603584
+    },
+    {
+      "path": "Contents/Frameworks/ArcCore.framework/Versions/A/Resources/zh_CN.lproj/locale.pak",
+      "bytes": 609491
+    },
+    {
+      "path": "Contents/Resources/web-chat-resources/dist/index.html",
+      "bytes": 1399
+    },
+    {
+      "path": "Contents/Resources/web-chat-resources/dist/background.js",
+      "bytes": 219775
+    },
+    {
+      "path": "Contents/Resources/web-chat-resources/dist/manifest.json",
+      "bytes": 1105
+    },
+    {
+      "path": "Contents/Resources/BoostBrowser_WelcomePostcardBundle.bundle/Contents/Resources/site/index.html",
+      "bytes": 88750
+    },
+    {
+      "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site/index.html",
+      "bytes": 45160
+    }
+  ],
+  "chromiumLocale": {
+    "source": "Contents/Frameworks/ArcCore.framework/Versions/A/Resources/zh_CN.lproj/locale.pak",
+    "destination": "Contents/Frameworks/ArcCore.framework/Versions/A/Resources/en.lproj/locale.pak",
+    "minimumBytes": 500000
+  },
+  "localization": {
+    "stringsFile": "translations/zh-Hans.strings",
+    "mainResourceDirectory": "Contents/Resources",
+    "bundleRoot": "Contents/Resources",
+    "bundleNamePrefixes": [
+      "BoostBrowser_",
+      "ARC_",
+      "ARCUI_",
+      "ARCClients_"
+    ],
+    "localeDirectories": [
+      "en.lproj",
+      "zh-Hans.lproj"
+    ]
+  },
+  "webRoots": [
+    "Contents/Resources/web-chat-resources/dist",
+    "Contents/Resources/BoostBrowser_WelcomePostcardBundle.bundle/Contents/Resources/site",
+    "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site",
+    "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site",
+    "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site"
+  ],
+  "webRootExpectations": [
+    {
+      "path": "Contents/Resources/web-chat-resources/dist",
+      "expectedTextFiles": 148
+    },
+    {
+      "path": "Contents/Resources/BoostBrowser_WelcomePostcardBundle.bundle/Contents/Resources/site",
+      "expectedTextFiles": 1
+    },
+    {
+      "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site",
+      "expectedTextFiles": 2
+    },
+    {
+      "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site",
+      "expectedTextFiles": 1
+    },
+    {
+      "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site",
+      "expectedTextFiles": 8
+    }
+  ],
+  "webExtensions": [
+    ".js",
+    ".html"
+  ],
+  "minimumTotalWebMatches": 171,
+  "maximumTotalWebMatches": 171,
+  "excludedPathFragments": [
+    ".map",
+    "/agents/",
+    "/prompts/",
+    "-prompt.txt",
+    "/spec.yaml"
+  ],
+  "webRules": [
+    {
+      "id": "web.90935.001",
+      "source": "Dismiss",
+      "target": "关闭",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 2,
+          "patchedMatches": 4
+        }
+      ],
+      "expectedPatchedMatches": 4
+    },
+    {
+      "id": "web.90935.002",
+      "source": "Nothing planned.",
+      "target": "暂无安排。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.003",
+      "source": "Channels",
+      "target": "频道",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.004",
+      "source": "No matching pages",
+      "target": "未找到匹配的页面",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.005",
+      "source": "No search results",
+      "target": "未找到搜索结果",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.006",
+      "source": "All",
+      "target": "全部",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.007",
+      "source": "Images",
+      "target": "图片",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.008",
+      "source": "News",
+      "target": "新闻",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.009",
+      "source": "Videos",
+      "target": "视频",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.010",
+      "source": "Export bundle",
+      "target": "导出资料包",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.011",
+      "source": "Copy as Text",
+      "target": "复制为文本",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.012",
+      "source": "Copy as JSON",
+      "target": "复制为 JSON",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.013",
+      "source": "Download",
+      "target": "下载",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.014",
+      "source": "Bundle sources",
+      "target": "资料包来源",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.015",
+      "source": "Skip",
+      "target": "跳过",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.016",
+      "source": "Tool result preview",
+      "target": "工具结果预览",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.017",
+      "source": "Loading",
+      "target": "正在加载",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.018",
+      "source": "Waiting for you",
+      "target": "等待你操作",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.019",
+      "source": "Response activity",
+      "target": "回复进度",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.020",
+      "source": "Rendering diagram…",
+      "target": "正在渲染图表…",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.021",
+      "source": "Copy table as",
+      "target": "将表格复制为",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.022",
+      "source": "Spreadsheet",
+      "target": "电子表格",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.023",
+      "source": "Edit message",
+      "target": "编辑消息",
+      "expectedMatches": 3,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 3,
+          "patchedMatches": 3
+        }
+      ],
+      "expectedPatchedMatches": 3
+    },
+    {
+      "id": "web.90935.024",
+      "source": "Message text",
+      "target": "消息内容",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.025",
+      "source": "Toggle message expansion",
+      "target": "展开或收起消息",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.026",
+      "source": "Cancel (Esc)",
+      "target": "取消 (Esc)",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.027",
+      "source": "Cancel",
+      "target": "取消",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.028",
+      "source": "Send (Enter)",
+      "target": "发送 (Enter)",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.029",
+      "source": "Send",
+      "target": "发送",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.030",
+      "source": "Images couldn’t be loaded.",
+      "target": "图片加载失败。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.031",
+      "source": "Open",
+      "target": "打开",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.032",
+      "source": "Reasons",
+      "target": "原因",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.033",
+      "source": "Share Feedback",
+      "target": "分享反馈",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 2,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.034",
+      "source": "Close",
+      "target": "关闭",
+      "expectedMatches": 3,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 2,
+          "patchedMatches": 4
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 5
+    },
+    {
+      "id": "web.90935.035",
+      "source": "Please share any details you can! We read every piece of feedback.",
+      "target": "请尽量提供详细信息！我们会阅读每一条反馈。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.036",
+      "source": "Privacy Policy",
+      "target": "隐私政策",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.037",
+      "source": "Edit",
+      "target": "编辑",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.038",
+      "source": "Ways to Get Help",
+      "target": "获取帮助的方式",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.039",
+      "source": "Copy as text options",
+      "target": "文本复制选项",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.040",
+      "source": "Copy as plain text",
+      "target": "复制为纯文本",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.041",
+      "source": "Copy as Markdown",
+      "target": "复制为 Markdown",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.042",
+      "source": "Feedback",
+      "target": "反馈",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.043",
+      "source": "Helpful",
+      "target": "有帮助",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 2,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.044",
+      "source": "Needs improvement",
+      "target": "需要改进",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 2,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.045",
+      "source": "Copy as text",
+      "target": "复制为文本",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.046",
+      "source": "Copy as image",
+      "target": "复制为图片",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.047",
+      "source": "Error actions",
+      "target": "错误处理选项",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.048",
+      "source": "Working through tasks",
+      "target": "正在处理任务",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.049",
+      "source": "Disconnect",
+      "target": "断开连接",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.050",
+      "source": "Connected",
+      "target": "已连接",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.051",
+      "source": "Connect",
+      "target": "连接",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.052",
+      "source": "Sending…",
+      "target": "正在发送…",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.053",
+      "source": "Reported",
+      "target": "已报告",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.054",
+      "source": "Not sent",
+      "target": "未发送",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.055",
+      "source": "Complete",
+      "target": "已完成",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.056",
+      "source": "Error",
+      "target": "错误",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.057",
+      "source": "Stopped",
+      "target": "已停止",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.058",
+      "source": "Paused",
+      "target": "已暂停",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.059",
+      "source": "Elapsed time",
+      "target": "已用时间",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.060",
+      "source": "Browser activity",
+      "target": "浏览器活动",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.061",
+      "source": "Artifact generation cancelled.",
+      "target": "已取消生成内容。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.062",
+      "source": "Live browser previews",
+      "target": "浏览器实时预览",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.063",
+      "source": "Selection actions",
+      "target": "选区操作",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.064",
+      "source": "Ask about this…",
+      "target": "询问此内容…",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.065",
+      "source": "Something went wrong",
+      "target": "出现问题",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.066",
+      "source": "Dia couldn't start this chat.",
+      "target": "Dia 无法开始此对话。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.067",
+      "source": "Reload chat",
+      "target": "重新加载对话",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.068",
+      "source": "What can I help with?",
+      "target": "有什么可以帮你？",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.069",
+      "source": "Ask a question or give Dia a task.",
+      "target": "问个问题，或交给 Dia 一项任务。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.070",
+      "source": "Dia chat",
+      "target": "Dia 聊天",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/4.Bu6o3w74.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.071",
+      "source": "Note formatting",
+      "target": "笔记格式",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.072",
+      "source": "Checks",
+      "target": "复选框",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 2,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.073",
+      "source": "Title",
+      "target": "标题",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 2,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.074",
+      "source": "Table",
+      "target": "表格",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 2,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.075",
+      "source": "Quote preview",
+      "target": "引用预览",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.076",
+      "source": "Add to Note",
+      "target": "添加到笔记",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.077",
+      "source": "Add row",
+      "target": "添加行",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 2,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.078",
+      "source": "Add column",
+      "target": "添加列",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 2,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.079",
+      "source": "Open chat",
+      "target": "打开对话",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.080",
+      "source": "Assign to Dia",
+      "target": "交给 Dia",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.081",
+      "source": "Retry",
+      "target": "重试",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.082",
+      "source": "New to-do",
+      "target": "新建待办",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.083",
+      "source": "Add a to-do",
+      "target": "添加待办事项",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 2,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.084",
+      "source": "Couldn't update your to-dos. Try again.",
+      "target": "无法更新待办事项，请重试。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.085",
+      "source": "Workspace To-dos",
+      "target": "工作区待办",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 2,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.086",
+      "source": "This document changed elsewhere.",
+      "target": "此文档已在别处修改。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.087",
+      "source": "Reload latest",
+      "target": "加载最新版本",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.088",
+      "source": "Keep my edits",
+      "target": "保留我的编辑",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.089",
+      "source": "Notes",
+      "target": "笔记",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/5.Ctcgs-0O.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.090",
+      "source": "Read only",
+      "target": "只读",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/3.7ALUgc3W.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.091",
+      "source": "Scheduled tasks overview",
+      "target": "定时任务概览",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/3.7ALUgc3W.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.092",
+      "source": "Try again",
+      "target": "重试",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/nodes/3.7ALUgc3W.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.093",
+      "source": "Welcome to Dia",
+      "target": "欢迎使用 Dia",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_WelcomePostcardBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.094",
+      "source": "Continue",
+      "target": "继续",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_WelcomePostcardBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.095",
+      "source": "Back to the postcard",
+      "target": "返回明信片",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_WelcomePostcardBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.096",
+      "source": "Dictate with voice",
+      "target": "使用语音输入",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_WelcomePostcardBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 2,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.097",
+      "source": "Stop dictation",
+      "target": "停止听写",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_WelcomePostcardBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.098",
+      "source": "Pick a question to answer:",
+      "target": "选一个问题回答：",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_WelcomePostcardBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.099",
+      "source": "Pick a question to answer",
+      "target": "选一个问题回答",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_WelcomePostcardBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.100",
+      "source": "Flip postcard back to the front",
+      "target": "翻回明信片正面",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_WelcomePostcardBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.101",
+      "source": "Click the postcard to flip it",
+      "target": "点击翻转明信片",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_WelcomePostcardBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.102",
+      "source": "The Morning Brief",
+      "target": "晨间简报",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.103",
+      "source": "Top to-dos",
+      "target": "优先待办",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.104",
+      "source": "Connect apps",
+      "target": "连接应用",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.105",
+      "source": "Connect your apps to Dia",
+      "target": "将应用连接到 Dia",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.106",
+      "source": "Back to to-dos",
+      "target": "返回待办事项",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.107",
+      "source": "Active",
+      "target": "进行中",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.108",
+      "source": "Awaiting reply",
+      "target": "等待回复",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.109",
+      "source": "Describe something else",
+      "target": "描述其他内容",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.110",
+      "source": "Your day",
+      "target": "今日安排",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.111",
+      "source": "Looking ahead",
+      "target": "展望后续",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.112",
+      "source": "Your first morning brief is on its way",
+      "target": "你的第一份晨间简报即将送达",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_MorningBriefTeaserBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.113",
+      "source": "Start with Dia",
+      "target": "开始使用 Dia",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.114",
+      "source": "Journey controls",
+      "target": "入门控制",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.115",
+      "source": "Sound on",
+      "target": "声音开启",
+      "expectedMatches": 2,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 2,
+          "patchedMatches": 2
+        }
+      ],
+      "expectedPatchedMatches": 2
+    },
+    {
+      "id": "web.90935.116",
+      "source": "Sound off",
+      "target": "声音关闭",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.117",
+      "source": "Journey tasks",
+      "target": "入门任务",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.118",
+      "source": "Make Dia yours.",
+      "target": "打造你的 Dia。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.119",
+      "source": "Here’s where to start.",
+      "target": "从这里开始。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.120",
+      "source": "You’re ready.",
+      "target": "准备就绪。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.121",
+      "source": "COMPLETED",
+      "target": "已完成",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.122",
+      "source": "Your account is ready",
+      "target": "你的账号已就绪",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.123",
+      "source": "Your Morning Brief",
+      "target": "你的晨间简报",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.124",
+      "source": "Open every link in Dia",
+      "target": "用 Dia 打开所有链接",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.125",
+      "source": "Default browser",
+      "target": "默认浏览器",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.126",
+      "source": "Your connected world",
+      "target": "你已连接的应用",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.127",
+      "source": "Ask on Page",
+      "target": "询问当前页面",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.128",
+      "source": "Across your apps",
+      "target": "跨应用",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.129",
+      "source": "Progress",
+      "target": "进度",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.130",
+      "source": "Bring context with you",
+      "target": "带上你的上下文",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.131",
+      "source": "Your profiles",
+      "target": "你的配置档",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.132",
+      "source": "Choose at least two apps to connect",
+      "target": "至少选择两个要连接的应用",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.133",
+      "source": "Slide to connect →",
+      "target": "滑动以连接 →",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.134",
+      "source": "Connect Slack",
+      "target": "连接 Slack",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.135",
+      "source": "Complete any two actions to continue.",
+      "target": "完成任意两项操作后继续。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.136",
+      "source": "Complete 2 tasks to unlock next section",
+      "target": "完成两项任务以解锁下一节",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_TrialGuideBundle.bundle/Contents/Resources/site/index.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.90935.137",
+      "source": "Sections",
+      "target": "章节",
+      "expectedMatches": 6,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/figma.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/linkedin.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/google.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/notion.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/slack.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/granola.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 6
+    },
+    {
+      "id": "web.90935.138",
+      "source": "Settings → Apps",
+      "target": "设置 → 应用",
+      "expectedMatches": 6,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/figma.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/linkedin.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/google.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/notion.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/slack.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/granola.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 6
+    },
+    {
+      "id": "web.90935.139",
+      "source": "Opening in Dia…",
+      "target": "正在 Dia 中打开…",
+      "expectedMatches": 3,
+      "files": [
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/linkedin.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/google.html",
+          "matches": 1,
+          "patchedMatches": 1
+        },
+        {
+          "path": "Contents/Resources/BoostBrowser_ToolTourBundle.bundle/Contents/Resources/site/notion.html",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 3
+    }
+  ],
+  "webHashManifests": {
+    "original": "manifests/1.57.1-90935.webui-original.sha256",
+    "patched": "manifests/1.57.1-90935.webui-patched.sha256"
+  },
+  "expectedTotalPatchedMatches": 177
+}
